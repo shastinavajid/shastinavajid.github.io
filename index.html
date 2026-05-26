@@ -33,7 +33,7 @@
             overflow: hidden; /* Clips children to the border radius */
         }
 
-        /* Left Column: Fixed Image Container */
+        /* Left Column: Fixed Image Container Box */
         .image-section {
             flex: 1;
             background-color: #ebebeb;
@@ -41,13 +41,30 @@
             justify-content: center;
             align-items: center;
             padding: 20px;
+            border-right: 1px solid #eef2f5;
         }
 
-        .image-section img {
-            max-width: 100%;
+        /* Minimalist Asset Placeholder Box */
+        .image-placeholder {
+            width: 100%;
+            height: 100%;
             max-height: 85vh;
-            object-fit: contain;
+            border: 2px dashed #bcccdc;
             border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #7f8c8d;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .placeholder-icon {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #a8dadc;
         }
 
         /* Right Column: Scrollable Document Container */
@@ -184,7 +201,19 @@
 </head>
 <body>
 
-   
+    <div class="container">
+        
+        <!-- Left Column: Product Imagery Placeholder -->
+        <div class="image-section">
+            <div class="image-placeholder">
+                <div class="placeholder-icon">📦</div>
+                <p style="text-align: center; color: #7f8c8d; font-size: 0.9rem;">
+                    <strong>[ Physical Asset Box Area ]</strong><br>
+                    Insert local image tag here when ready.
+                </p>
+            </div>
+        </div>
+
         <!-- Right Column: Document Information -->
         <div class="text-section">
             <h1>Peace Flakes</h1>
